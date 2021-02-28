@@ -6,6 +6,10 @@ import styles from '../styles/components/Navigation.module.css'
 
 const LINKS = [
   {
+    name: '💻TipsWeb',
+    path: '/'
+  },
+  {
     name: 'Home',
     path: '/'
   },

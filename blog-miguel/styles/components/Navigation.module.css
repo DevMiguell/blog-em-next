@@ -3,20 +3,30 @@
   padding: 0.5rem 0;
   display: flex;
   margin-left: 1rem;
+  margin-bottom: 1rem;
 }
 
 .list li { /* > * + * */ 
   padding: 1rem;
   margin-right: 1rem;
-  color:white;
+  color:rgb(255, 255, 255);
+  transition:  0.2s linear;
+}
+.list li:first-child{ /* > * + * */ 
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  margin-right: 25%;
 }
 
 
 .navAnchor {
   color: rgba(255, 255, 255, 0.5);
+  transition:  0.2s linear;
 }
 
 .navAnchor:hover,
 .navAnchor:focus {
-  text-decoration: underlined dotted 2px
+  color: white;
 }
