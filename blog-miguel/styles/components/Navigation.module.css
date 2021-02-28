@@ -1,0 +1,22 @@
+.list {
+  list-style: none;
+  padding: 0.5rem 0;
+  display: flex;
+  margin-left: 1rem;
+}
+
+.list li { /* > * + * */ 
+  padding: 1rem;
+  margin-right: 1rem;
+  color:white;
+}
+
+
+.navAnchor {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.navAnchor:hover,
+.navAnchor:focus {
+  text-decoration: underlined dotted 2px
+}
