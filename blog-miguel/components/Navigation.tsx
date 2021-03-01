@@ -1,14 +1,11 @@
 import { ReactNode } from 'react'
 import { useRouter } from 'next/router';
+import Intro from "../components/intro"
 import Link from 'next/link';
 
 import styles from '../styles/components/Navigation.module.css'
 
 const LINKS = [
-  {
-    name: '💻TipsWeb',
-    path: '/'
-  },
   {
     name: 'Home',
     path: '/'
@@ -27,7 +24,7 @@ type NavAnchor = {
 function NavAnchor({ path, children }: NavAnchor) {
   return (
     <Link href={path}>
-      <a className={styles.navAnchor}>{children}</a>
+      <a>{children}</a>
     </Link>
   )
 }
@@ -36,10 +33,11 @@ export default function Navigation() {
   const { pathname } = useRouter()
 
   return (
-    <nav>
-      <ul className={styles.list}>
+    <nav className={styles.list}>
+      <Intro />
+      <ul>
         {LINKS.map(({ name, path }) => (
-          <li key={path}>
+          <li className={styles.navAnchor} key={path}>
             {path === pathname ? <span>{name}</span>
               : <NavAnchor path={path}>{name}</NavAnchor>}
           </li>

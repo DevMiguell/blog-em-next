@@ -1,12 +1,22 @@
 import { CMS_NAME } from '../lib/constants'
+import Image from 'next/image'
+import Link from 'next/link'
+
 
 const Intro = () => {
   return (
-    <section className="flex-col md:flex-row flex items-center md:justify-between mt-16 mb-16 md:mb-12">
-      <h1 className="text-6xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8">
-        Voltar
-      </h1>
-    </section>
+    <>
+      <Link href="/">
+        <div className=" my-auto  " >
+          <Image
+            src="/favicon/favicon.ico"
+            alt="Picture of the author"
+            width={40}
+            height={40}
+          />
+        </div>
+      </Link>
+    </>
   )
 }
 

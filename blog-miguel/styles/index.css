@@ -1,5 +1,9 @@
 @tailwind base;
 /* Write your own custom base styles here */
+body {
+  background-color:rgb(17, 17, 17);
+  color:rgb(221, 221, 221);
+}
 
 /* Start purging... */
 @tailwind components;
