@@ -3,16 +3,17 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 
-const Intro = () => {
+const Logo = () => {
   return (
     <>
       <Link href="/">
-        <div className=" my-auto  " >
+        <div className="my-auto cursor-pointer flex" >
           <Image
-            src="/favicon/favicon.ico"
+            src="/favicon/logo-svg.svg"
             alt="Picture of the author"
-            width={40}
-            height={40}
+            width={50}
+            height={50}
+            quality={100}
           />
         </div>
       </Link>
@@ -20,4 +21,4 @@ const Intro = () => {
   )
 }
 
-export default Intro
+export default Logo

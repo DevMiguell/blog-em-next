@@ -1,18 +1,21 @@
 import { ReactNode } from 'react'
 import { useRouter } from 'next/router';
-import Intro from "../components/intro"
+import Logo from "../components/logo"
 import Link from 'next/link';
 
-import styles from '../styles/components/Navigation.module.css'
 
 const LINKS = [
   {
-    name: 'Home',
+    name: 'Início',
     path: '/'
   },
   {
-    name: 'About',
+    name: 'Sobre',
     path: '/about'
+  },
+  {
+    name: 'Projetos',
+    path: 'https://github.com/DevMiguell'
   },
 ]
 
@@ -33,16 +36,17 @@ export default function Navigation() {
   const { pathname } = useRouter()
 
   return (
-    <nav className={styles.list}>
-      <Intro />
-      <ul>
+    <nav className="flex flex-row justify-between py-4  ">
+      <Logo />
+      <ul className="flex items-center ">
         {LINKS.map(({ name, path }) => (
-          <li className={styles.navAnchor} key={path}>
+          <li className="mr-10 p-4 text-lg  hover:text-white text-white cursor-default " key={path}>
             {path === pathname ? <span>{name}</span>
-              : <NavAnchor path={path}>{name}</NavAnchor>}
+              : <a className="text-gray-400 hover:text-white duration-300"><NavAnchor path={path}>{name}</NavAnchor></a>}
           </li>
         ))}
       </ul>
+
     </nav>
   )
 }

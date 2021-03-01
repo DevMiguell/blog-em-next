@@ -10,7 +10,7 @@ export default function About() {
     <>
       <Layout>
         <Head>
-          <title>Sobre</title>
+          <title>Projetos</title>
         </Head>
         <Container>
           <Navigation />
@@ -22,7 +22,7 @@ export default function About() {
               height={50}
               quality={100}
             />
-            <h1 className=" my-4 text-4xl ">Miguel Santos</h1>
+            <h1 className=" my-4 text-5xl ">Pagina de Progetos em breve</h1>
           </header>
         </Container>
       </Layout>
