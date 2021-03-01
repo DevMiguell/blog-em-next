@@ -14,15 +14,9 @@ export default function About() {
         </Head>
         <Container>
           <Navigation />
-          <header className="flex justify-center flex-col text-center">
-            <Image
-              src="/favicon/logo-svg.svg"
-              alt="Picture of the author"
-              width={50}
-              height={50}
-              quality={100}
-            />
-            <h1 className=" my-4 text-4xl ">Miguel Santos</h1>
+          <header className="flex justify-center flex-col text-center  items-center mt-16">
+            <img className="w-48 rounded-full" src="https://github.com/DevMiguell.png" alt="Miguel Santos" />
+            <h1 className=" my-4 text-4xl ">DevMiguel</h1>
           </header>
         </Container>
       </Layout>

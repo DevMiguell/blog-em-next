@@ -15,7 +15,7 @@ const LINKS = [
   },
   {
     name: 'Projetos',
-    path: 'https://github.com/DevMiguell'
+    path: 'https://github.com/DevMiguell?tab=repositories'
   },
 ]
 
@@ -36,17 +36,18 @@ export default function Navigation() {
   const { pathname } = useRouter()
 
   return (
-    <nav className="flex flex-row justify-between py-4  ">
-      <Logo />
-      <ul className="flex items-center ">
-        {LINKS.map(({ name, path }) => (
-          <li className="mr-10 p-4 text-lg  hover:text-white text-white cursor-default " key={path}>
-            {path === pathname ? <span>{name}</span>
-              : <a className="text-gray-400 hover:text-white duration-300"><NavAnchor path={path}>{name}</NavAnchor></a>}
-          </li>
-        ))}
-      </ul>
-
-    </nav>
+    <>
+      <nav className="flex flex-row justify-between py-4  ">
+        <Logo />
+        <ul className="flex items-center ">
+          {LINKS.map(({ name, path }) => (
+            <li className="mr-10 p-4 text-lg  hover:text-white text-white cursor-default " key={path}>
+              {path === pathname ? <span>{name}</span>
+                : <a className="text-gray-400 hover:text-white duration-300"><NavAnchor path={path}>{name}</NavAnchor></a>}
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </>
   )
 }
