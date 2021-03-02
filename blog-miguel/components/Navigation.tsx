@@ -41,7 +41,7 @@ export default function Navigation() {
         <Logo />
         <ul className="flex items-center ">
           {LINKS.map(({ name, path }) => (
-            <li className="mr-10 p-4 text-lg  hover:text-white text-white cursor-default " key={path}>
+            <li className="mr-10 p-4 text-lg  hover:text-white text-white cursor-default tracking-widest" key={path}>
               {path === pathname ? <span>{name}</span>
                 : <a className="text-gray-400 hover:text-white duration-300"><NavAnchor path={path}>{name}</NavAnchor></a>}
             </li>
